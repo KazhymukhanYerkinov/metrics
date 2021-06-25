@@ -10,18 +10,13 @@ let pie_chart_1_position = 'right';
 
 let pie_chart_2_data = [10, 10, 80];
 let pie_chart_2_labels = ['ПК', 'Планшет', 'Мобильный'];
-let pie_chart_2_colors = ['#7486E7', '#F4F7F9','#1B7FF5'];
+let pie_chart_2_colors = ['#7486E7', '#F4F7F9', '#1B7FF5'];
 let pie_chart_2_position = 'bottom';
 
 const Main = () => {
   return (
-    <div className = 'main'>
-      <Header />
-
-      <div className = 'main__inner'>
-        <Sidebar />
-
-        {/* <div className = 'main__content'>
+    <div>
+      {/* <div className = 'main__content'>
           <div className = 'main__block'>
             <LineChart fill = {false} borderColor = '#F08C2F' />
           </div>
@@ -72,11 +67,9 @@ const Main = () => {
           </div>
 
         </div>  */}
-        
-      </div>
 
     </div>
-    
+
   )
 };
 

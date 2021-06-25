@@ -22,8 +22,12 @@ const Header = () => {
     setVisiblePopup((prevState) => !prevState);
   }
 
-  const handleHeaderVisiblePopup = () => {
-    setVisibleHeaderPopup((prevState) => !prevState);
+  const openHeaderVisiblePopup = () => {
+    setVisibleHeaderPopup(true);
+  }
+
+  const closeHeaderVisiblePopup = () => {
+    setVisibleHeaderPopup(false);
   }
 
   const handleOutsideClick = (event) => {
@@ -46,8 +50,11 @@ const Header = () => {
       <div className = 'header__inner'>
         <img className = 'header__logo' src = { logo } alt = '' />
 
-        <Button onClick = { handleHeaderVisiblePopup } type = 'primary' className = 'header__button'> <UnorderedListOutlined /> </Button>
-        { visibleHeaderPopup &&  <HeaderPopup />}
+        <Button onClick = { openHeaderVisiblePopup } type = 'primary' className = 'header__button'> <UnorderedListOutlined /> </Button> 
+          <HeaderPopup 
+            visibleHeaderPopup = { visibleHeaderPopup }
+            closeHeaderVisiblePopup = { closeHeaderVisiblePopup }
+          />
 
         <div className = 'header__content'>
           <Switch  defaultChecked className = 'switch'/>

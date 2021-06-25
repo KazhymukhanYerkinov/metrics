@@ -1,14 +1,5 @@
 .header-popup {
-    width: 100%;
-    background-color: #2A375D;
-    position: absolute;
-    top: 8vh;
-
-    display: none;
-
-    @media (max-width: 600px) {
-        display: block;
-    }
+    background: #2A375D;
 
     &__inner {
         display: flex;
@@ -32,4 +23,19 @@
         font-size: 24px;
         color: #A0B1C7;
     }
+}
+
+.ant-drawer-header {
+    background-color: #2A375D;
+    border-radius: 0;
+}
+  
+.ant-drawer-title {
+    color: #fff;
+}
+  
+.ant-drawer-body {
+    background-color: #2A375D;
+    color: #fff;
+    height: calc(100vh - 55px);
 }
