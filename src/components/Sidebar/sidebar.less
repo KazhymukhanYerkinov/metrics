@@ -1,7 +1,8 @@
 .sidebar {
-    width: 18%;
+    width: 100%;
     background-color: #324068;
-    height: 88vh;
+    height: 100%;
+    min-height: 88vh;
 
     @media (max-width: 900px) {
         display: none;
@@ -24,6 +25,11 @@
 
 
         &:hover {
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.08);
+            background: linear-gradient(91.93deg, #1B7FF5 0%, rgba(27, 127, 245, 0.4) 135.68%);
+        }
+
+        &--active {
             box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.08);
             background: linear-gradient(91.93deg, #1B7FF5 0%, rgba(27, 127, 245, 0.4) 135.68%);
         }

@@ -12,4 +12,23 @@
 .app {
     height: 100%;
     min-height: 100vh;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__content {
+        width: 82%;
+        min-height: 88vh;
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+    }
+    &__sidebar {
+        width: 18%;
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
 }
+

@@ -1,20 +1,53 @@
 .main {
-    height: 100%;
-    min-height: 100vh;
-
-    &__inner {
-        display: flex;
-        
-    }
+    background-color: #2A375D;
 
     &__content {
-        width: 80%;
+        padding: 15px 20px;
+
+        width: 100%;
+        overflow-x: scroll;
+
+        background-color: #2A375D;
     }
-    &__block {
+    &__flex {
+        margin: 20px 0;
+
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
-        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+
+
+    &__chart {
+        &--pie {
+            width: 42%;
+            @media (max-width: 1200px) {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+        }
+        &--line {
+            width: 50%;
+            @media (max-width: 1200px) {
+                margin: 20px 0;
+                width: 100%;
+            }
+        }
+        &--bar {
+            width: 60%;
+            @media (max-width: 1200px) {
+                margin: 20px 0;
+                width: 100%;
+            }
+        }
+        &--revenue {
+            width: 35%;
+            @media (max-width: 1200px) {
+                margin: 20px 0;
+                width: 100%;
+            }
+        }
     }
 }

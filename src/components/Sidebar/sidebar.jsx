@@ -1,4 +1,5 @@
 import { sidebar } from '../../data/sidebar';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -7,10 +8,10 @@ const Sidebar = () => {
 
         <div className = 'sidebar__items'>
           { sidebar.map((item, index) => (
-            <div key = { index } className = 'sidebar__item'>
+            <NavLink to = {`/${item.url}`} activeClassName = 'sidebar__item--active' key = { index } className = 'sidebar__item'>
               <div className = 'sidebar__item--image'> { item.image } </div>
               <div className = 'sidebar__item--name'> { item.name } </div>
-            </div>
+            </NavLink>
           )) }
         </div>
 

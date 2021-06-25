@@ -15,7 +15,43 @@ let pie_chart_2_position = 'bottom';
 
 const Main = () => {
   return (
-    <div>
+    <div className = 'main'>
+      <div className = 'main__content'>
+
+        <div className = 'main__flex'>
+
+          <div className = 'main__chart--pie'>
+            <PieChart
+              items = { pie_chart_1_data } 
+              labels = { pie_chart_1_labels }
+              colors = { pie_chart_1_colors }
+              position = { pie_chart_1_position }
+            />
+          </div>
+
+          <div className = 'main__chart--line'>
+            <LineChart 
+              fill = {true}
+              borderColor = '#7CB5EC'
+            />
+          </div>
+          
+        </div>
+
+
+        <div className = 'main__flex'>
+          <div className = 'main__chart--bar'>
+            <BarChart />
+          </div>
+
+          <div className = 'main__chart--revenue'>
+            <Funnel />
+          </div>
+        </div>
+
+        
+      </div>
+
       {/* <div className = 'main__content'>
           <div className = 'main__block'>
             <LineChart fill = {false} borderColor = '#F08C2F' />
@@ -23,15 +59,6 @@ const Main = () => {
 
           <div className = 'main__block'>
             <Funnel />
-          </div>
-
-          <div className = 'main__block'>
-            <PieChart
-              items = { pie_chart_1_data } 
-              labels = { pie_chart_1_labels }
-              colors = { pie_chart_1_colors }
-              position = { pie_chart_1_position }
-            />
           </div>
 
           <div className = 'main__block'>
